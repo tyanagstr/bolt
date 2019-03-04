@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* ページ全体で参照する色を定義 */
+/* var(--color-to-use) で使用 */
+:root{
+  --color-default-text: #333;
+  --color-theme: #74cfae;
+  --color-background-gray: #f2f2f2;
+  --color-background-darkgray: #4e4e4e;
+}
