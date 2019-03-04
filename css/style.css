@@ -1,18 +1,22 @@
 @charset "utf-8";
-
 /* ページ全体で参照する色を定義 */
+
 /* var(--color-to-use) で使用 */
-:root{
+
+:root {
   --color-default-text: #333;
   --color-theme: #74cfae;
   --color-background-gray: #f2f2f2;
   --color-background-darkgray: #4e4e4e;
   --height-nav-bar: 70px;
+  --height-nav-bar-sp: 160px;
 }
 
 /* general */
+
 body {
-  font-family: 'Lato', 'Raleway', 'sans-self'; /* フォントの指定 */
+  font-family: 'Lato', 'Raleway', 'sans-self';
+  /* フォントの指定 */
 }
 
 .inner {
@@ -20,8 +24,8 @@ body {
   margin: 0 auto;
 }
 
-
 /* header */
+
 .header {
   background-color: #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, .5);
@@ -37,8 +41,9 @@ body {
 .header-inner {
   padding: 15px auto;
   display: flex;
+  height: var(--height-nav-bar);
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 }
 
 .header__bolt_icon {
@@ -46,6 +51,10 @@ body {
   display: inline-block;
   line-height: var(--height-nav-bar);
   font-size: 40px;
+}
+
+.header__btn_hamburger {
+  display: none;
 }
 
 .header__btn_contact {
@@ -61,27 +70,25 @@ body {
 }
 
 .header__btn_contact:hover {
-  color: var(--color-default-text);  
+  color: var(--color-default-text);
 }
 
 /* main */
 
 .main {
   background-color: var(--color-background-gray);
-  padding-top: var(--height-nav-bar); /* ナビゲーションバーの固定分 */
   width: 100%;
 }
 
 /* theme */
+
 .theme-inner {
   text-align: center;
 }
 
 .theme__heading {
   color: var(--color-theme);
-  font-size: 90px;
-  font-weight: 700;  
-  margin: 250px auto 0;
+  font-weight: 700;
 }
 
 .theme__description {
@@ -92,6 +99,7 @@ body {
 }
 
 /* detail */
+
 .detail {
   background-color: var(--color-theme);
   color: #fff;
@@ -106,7 +114,8 @@ body {
 
 .detail__img {
   flex: 1;
-  line-height: 0; /* figcaption 用の隙間を消す */
+  line-height: 0;
+  /* figcaption 用の隙間を消す */
   padding: 0 50px 0 100px;
   margin: 0;
 }
@@ -142,10 +151,10 @@ body {
 }
 
 .latest-work__images {
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   font-size: 0;
-  columns: 3; 
+  columns: 3;
   margin: 40px auto 0;
 }
 
@@ -154,6 +163,7 @@ body {
   opacity: .7;
   transition: opacity .3s ease;
 }
+
 .latest-work__images__image:hover {
   opacity: 1;
 }
@@ -161,7 +171,6 @@ body {
 .latest-work__description {
   display: flex;
 }
-
 
 .latest-work__btn-email {
   background-color: var(--color-theme);
@@ -181,6 +190,7 @@ body {
 }
 
 /* skills */
+
 .skills {
   background-color: var(--color-background-darkgray);
   margin-top: 70px;
@@ -201,7 +211,6 @@ body {
   margin-top: 50px;
 }
 
-
 .skills__images__image_caption {
   color: #fff;
   font-size: 16px;
@@ -209,6 +218,7 @@ body {
 }
 
 /* sns */
+
 .sns {
   margin-top: 200px;
   padding-bottom: 200px;
@@ -234,6 +244,7 @@ body {
 }
 
 /* footer */
+
 .footer {
   background-color: var(--color-theme);
   width: 100%;
@@ -249,17 +260,64 @@ body {
   color: #fff;
 }
 
-@media screen and (max-width:767px) { 
-}
-@media screen and (min-width:768px) and ( max-width:1199px) {
+@media screen and (max-width:767px) {
   .inner {
-    width: 97%; 
+    width: 97%;
+  }
+
+  .header {
+    height: var(--height-nav-bar-sp);
   }
   
+  .header-inner {
+    height: var(--height-nav-bar-sp);
+  }
+
+  .header__bolt_icon {
+    font-size: calc(var(--height-nav-bar-sp) - 45px);
+    margin: 15px;
+  }
+
+  .header__btn_hamburger {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #ddd;
+    display: inline-block;
+    font-size: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100px;
+  }
+  
+  .header__btn_contact {
+    display: none;
+    width: 100%;
+  }
+
+  .main {
+    padding-top: var(--height-nav-bar-sp);
+    /* ナビゲーションバーの固定分 */
+  }
+
+  /* theme */
+  .theme__heading {
+    font-size: 80px;
+    margin: 160px auto 0;
+  }
+
+  /* detail */
+  .detail {
+    margin-top: 130px;
+  }
+
   .detail-inner {
     flex-flow: column;
   }
-  
+
   .detail__img {
     padding: 0;
     margin: 0 auto;
@@ -279,17 +337,18 @@ body {
     font-size: 0;
     margin: 40px auto 0;
   }
+
   .latest-work__images__image {
     margin: 0 auto;
     width: 300px;
     opacity: .7;
     transition: opacity .3s ease;
   }
-  /* tab 用の1列 3つずつ表示 */
+
+  /* tab,sp 用の1列 3つずつ表示 */
   .latest-work__images__image:nth-of-type(4) {
     margin-top: 80px;
   }
-
   .latest-work__description {
     flex-flow: column;
     margin-top: 80px;
@@ -300,7 +359,6 @@ body {
   }
 
   /* skills */
-
   .skills__images {
     display: flex;
     flex-flow: column;
@@ -310,12 +368,115 @@ body {
   .skills__images__image {
     margin-top: 88px;
   }
+
   .skills__images__image:first-of-type {
     margin-top: 0;
   }
 
+  /* sns */
+  .sns {
+    margin-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .sns__buttons {
+    flex-flow: column;
+    margin: 0 15px;
+  }
+
+  .sns__button {
+    width: auto;
+  }
+}
+
+@media screen and (min-width:768px) and ( max-width:1199px) {
+  .inner {
+    width: 97%;
+  }
+
+  .main {
+    padding-top: var(--height-nav-bar);
+    /* ナビゲーションバーの固定分 */
+  }
+
+  /* theme */
+  .theme__heading {
+    font-size: 90px;
+    margin: 250px auto 0;
+  }
+
+  /* detail */
+  .detail-inner {
+    flex-flow: column;
+  }
+
+  .detail__img {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .detail__text {
+    margin-top: 20px;
+    padding-top: 0;
+    padding-bottom: 25px;
+  }
+
+  /* latest-work */
+  .latest-work__images {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    font-size: 0;
+    margin: 40px auto 0;
+  }
+
+  .latest-work__images__image {
+    margin: 0 auto;
+    width: 300px;
+    opacity: .7;
+    transition: opacity .3s ease;
+  }
+
+  /* tab,sp 用の1列 3つずつ表示 */
+  .latest-work__images__image:nth-of-type(4) {
+    margin-top: 80px;
+  }
+  .latest-work__description {
+    flex-flow: column;
+    margin-top: 80px;
+    margin-bottom: 70px;
+  }
+  .latest-work__btn-email {
+    margin: 40px auto 0;
+  }
+
+  /* skills */
+  .skills__images {
+    display: flex;
+    flex-flow: column;
+    margin-top: 50px;
+  }
+
+  .skills__images__image {
+    margin-top: 88px;
+  }
+
+  .skills__images__image:first-of-type {
+    margin-top: 0;
+  }
 }
 @media screen and (min-width:1200px) {
+  .main {
+    padding-top: var(--height-nav-bar);
+    /* ナビゲーションバーの固定分 */
+  }
+
+  /* theme */
+  .theme__heading {
+    font-size: 90px;
+    margin: 250px auto 0;
+  }
+
   /* pc 用の 3 列 2行表示 */
   .latest-work__images__image:nth-of-type(3n) {
     margin: 0 0 80px;
@@ -331,7 +492,6 @@ body {
     justify-content: center;
     align-items: flex-start;
   }
-
   .latest-work__text {
     width: 460px;
     line-height: 20px;
