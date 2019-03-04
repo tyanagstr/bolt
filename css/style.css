@@ -9,7 +9,7 @@
   --color-background-gray: #f2f2f2;
   --color-background-darkgray: #4e4e4e;
   --height-nav-bar: 70px;
-  --height-nav-bar-sp: 160px;
+  --height-nav-bar-sp: 110px;
 }
 
 /* general */
@@ -283,9 +283,9 @@ body {
     border-radius: 4px;
     color: #ddd;
     display: inline-block;
-    font-size: 70px;
-    height: 70px;
-    line-height: 70px;
+    font-size: calc(var(--height-nav-bar-sp) - 45px);
+    height: calc(var(--height-nav-bar-sp) - 45px);
+    line-height: calc(var(--height-nav-bar-sp) - 45px);
     margin: 15px;
     padding: 10px;
     text-align: center;
