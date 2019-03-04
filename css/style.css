@@ -7,9 +7,267 @@
   --color-theme: #74cfae;
   --color-background-gray: #f2f2f2;
   --color-background-darkgray: #4e4e4e;
+  --height-nav-bar: 70px;
 }
 
-/* フォントの指定 */
+/* general */
 body {
-  font-family: 'Lato', 'Raleway', 'sans-self';
+  font-family: 'Lato', 'Raleway', 'sans-self'; /* フォントの指定 */
+}
+
+.inner {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* header */
+.header {
+  background-color: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+  height: var(--height-nav-bar);
+  position: fixed;
+  padding: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header-inner {
+  padding: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.header__bolt_icon {
+  color: var(--color-default-text);
+  display: inline-block;
+  line-height: var(--height-nav-bar);
+  font-size: 40px;
+}
+
+.header__btn_contact {
+  background-color: var(--color-theme);
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  padding: 14px 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+.header__btn_contact:hover {
+  color: var(--color-default-text);  
+}
+
+/* main */
+
+.main {
+  background-color: var(--color-background-gray);
+  padding-top: var(--height-nav-bar); /* ナビゲーションバーの固定分 */
+  width: 100%;
+}
+
+/* theme */
+.theme-inner {
+  text-align: center;
+}
+
+.theme__heading {
+  color: var(--color-theme);
+  font-size: 90px;
+  font-weight: 700;  
+  margin: 250px auto 0;
+}
+
+.theme__description {
+  color: #c0c0c0;
+  font-size: 30px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+/* detail */
+.detail {
+  background-color: var(--color-theme);
+  color: #fff;
+  margin-top: 250px;
+  padding-top: 50px;
+}
+
+.detail-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail__img {
+  flex: 1;
+  line-height: 0; /* figcaption 用の隙間を消す */
+  padding: 0 50px 0 100px;
+  margin: 0;
+}
+
+.detail__text {
+  flex: 2.2;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.detail__heading {
+  font-size: 24px;
+  font-family: 'Raleway';
+}
+
+.detail__description {
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 35px;
+}
+
+/* latest-work */
+
+.latest-work {
+  color: var(--color-default-text);
+  margin-top: 60px;
+  text-align: center;
+}
+
+.latest-work__heading {
+  font-family: 'Raleway';
+  font-size: 24px;
+}
+
+.latest-work__images {
+  display: flex; 
+  flex-wrap: wrap;
+  font-size: 0;
+  columns: 3; 
+  margin: 40px auto 0;
+}
+
+/* pc 用の 3 列 2行表示 */
+.latest-work__images__image {
+  margin: 0 100px 80px 0;
+  opacity: .7;
+  transition: opacity .3s ease;
+}
+.latest-work__images__image:nth-of-type(3n) {
+  margin: 0 0 80px;
+}
+.latest-work__images__image:nth-of-type(n+4):nth-of-type(-n+6) {
+  margin: 0 100px 0 0;
+}
+.latest-work__images__image:nth-of-type(n+6):nth-of-type(-n+6) {
+  margin: 0;
+}
+.latest-work__images__image:hover {
+  opacity: 1;
+}
+
+.latest-work__description {
+  display: flex;
+  margin-top: 90px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.latest-work__text {
+  width: 460px;
+  line-height: 20px;
+}
+
+.latest-work__btn-email {
+  background-color: var(--color-theme);
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 90px;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: color .3s ease;
+  width: 150px;
+}
+
+.latest-work__btn-email:hover {
+  color: var(--color-default-text);
+}
+
+/* skills */
+.skills {
+  background-color: var(--color-background-darkgray);
+  margin-top: 70px;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.skills__heading {
+  color: #fff;
+  font-family: 'Raleway';
+  font-size: 24px;
+}
+
+.skills__images {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.skills__images__image {
+  margin-right: 180px;
+}
+.skills__images__image:last-child {
+  margin-right: 0;
+}
+
+.skills__images__image_caption {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* sns */
+.sns {
+  margin-top: 200px;
+  padding-bottom: 200px;
+}
+
+.sns__buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.sns__button {
+  color: var(--color-theme);
+  font-size: 35px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  transition: .3s;
+  width: 185px;
+}
+
+.sns__button:hover {
+  background-color: #fff;
+}
+
+/* footer */
+.footer {
+  background-color: var(--color-theme);
+  width: 100%;
+  padding: 20px 0 25px 0;
+}
+
+.footer-inner {
+  text-align: right;
+}
+
+.footer__description {
+  display: inline-block;
+  color: #fff;
 }

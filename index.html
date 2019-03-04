@@ -17,7 +17,7 @@
     <header class="header">
       <div class="inner header-inner">
         <div class="header__bolt_icon"><i class="fas fa-bolt"></i></div>
-        <button class="header__btn_contact">Contact</button>
+        <a class="header__btn_contact" href="#">Contact</a>
       </div>
     </header>
     <main class="main">
@@ -46,56 +46,58 @@
         <div class="inner latest-work-inner">
           <h1 class="latest-work__heading">OUR LATEST WORK</h1>
           <figure class="latest-work__images">
-            <img src="img/01.jpg">
-            <img src="img/02.jpg">
-            <img src="img/03.jpg">
-            <img src="img/04.jpg">
-            <img src="img/05.jpg">
-            <img src="img/06.jpg">
+            <img class="latest-work__images__image" src="img/01.jpg">
+            <img class="latest-work__images__image" src="img/02.jpg">
+            <img class="latest-work__images__image" src="img/03.jpg">
+            <img class="latest-work__images__image" src="img/04.jpg">
+            <img class="latest-work__images__image" src="img/05.jpg">
+            <img class="latest-work__images__image" src="img/06.jpg">
           </figure>
-          <p class="latest-work__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever.
-          </p>
-          <button class="latest-work__btn-email">Email Me!</button>
+          <div class="latest-work__description">
+            <p class="latest-work__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+              Ipsum has been the industry's standard dummy text ever.
+            </p>
+            <a class="latest-work__btn-email" href="#">Email Me!</a>
+          </div>
         </div>
       </article>
       <section class="skills">
         <div class="inner skills-inner">
           <h1 class="skills__heading">OUR SKILLS</h1>
           <div class="skills__images">
-            <figure class="skills__images__js">
+            <figure class="skills__images__image skills__images__js">
               <img src="img/circle_01.png">
-              <figcaption>JavaScirpt</figcaption>
+              <figcaption class="skills__images__image_caption">JavaScirpt</figcaption>
             </figure>
-            <figure class="skills__images__bootstrap">
+            <figure class="skills__images__image skills__images__bootstrap">
               <img src="img/circle_02.png">
-              <figcaption>Bootstrap</figcaption>
+              <figcaption class="skills__images__image_caption">Bootstrap</figcaption>
             </figure>
-            <figure class="skills__images__wordpress">
+            <figure class="skills__images__image skills__images__wordpress">
               <img src="img/circle_03.png">
-              <figcaption>WordPress</figcaption>
+              <figcaption class="skills__images__image_caption">WordPress</figcaption>
             </figure>
-            <figure class="skills__images__photoshop">
+            <figure class="skills__images__image skills__images__photoshop">
               <img src="img/circle_04.png">
-              <figcaption>Photoshop</figcaption>
+              <figcaption class="skills__images__image_caption">Photoshop</figcaption>
             </figure>
           </div>
         </div>
       </section>
       <nav class="sns">
         <div class="inner sns-inner">
-          <div class="sns--buttons">
-            <div class="sns--button sns--button-type-facebook"><a href=""><i></i></a></div>
-            <div class="sns--button sns--button-type-basketball"><a href=""><i></i></a></div>
-            <div class="sns--button sns--button-type-twitter"><a href=""><i></i></a></div>
-            <div class="sns--button sns--button-type-email"><a href=""><i></i></a></div>
+          <div class="sns__buttons">
+            <a class="sns__button sns__button-type-facebook"><i class="fab fa-facebook-f"></i></a>
+            <a class="sns__button sns__button-type-dribbble"><i class="fab fa-dribbble"></i></a>
+            <a class="sns__button sns__button-type-twitter"><i class="fab fa-twitter"></i></a>
+            <a class="sns__button sns__button-type-email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
       </nav>
     </main>
     <footer class="footer">
       <div class="inner footer-inner">
-        <p class="footer--description">Crafted with <i class="fas fa-heart"></i> by BlackTie.co.</p>
+        <p class="footer__description">Crafted with <i class="fas fa-heart"></i> by BlackTie.co.</p>
       </div>
     </footer>
   </body>
