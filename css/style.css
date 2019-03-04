@@ -8,3 +8,8 @@
   --color-background-gray: #f2f2f2;
   --color-background-darkgray: #4e4e4e;
 }
+
+/* フォントの指定 */
+body {
+  font-family: 'Lato', 'Raleway', 'sans-self';
+}
