@@ -254,7 +254,6 @@ body {
 
   
   .header-inner {
-    height: 90px;
     padding: 15px;
   }
 
@@ -278,14 +277,14 @@ body {
     position: fixed;
     display: none;
     left:0;
-    top: 120px;
+    top: 97px;
     width:100%;
     margin: 0;
     
   }
 
   .main {
-    padding-top: 120px;
+    padding-top: 97px;
     /* ナビゲーションバーの固定分 */
   }
 
