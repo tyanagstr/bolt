@@ -298,6 +298,9 @@ body {
   }
 
   /* detail */
+  .detail {
+    padding-bottom: 25px;
+  }
   .detail-inner {
     flex-flow: column;
   }
@@ -310,7 +313,6 @@ body {
   .detail__text {
     margin-top: 20px;
     padding-top: 0;
-    padding-bottom: 25px;
   }
 
   /* latest-work */
@@ -381,6 +383,10 @@ body {
 
 
   /* detail */
+  .detail {
+      padding-bottom: 25px;
+  }
+
   .detail-inner {
     flex-flow: column;
   }
@@ -393,7 +399,6 @@ body {
   .detail__text {
     margin-top: 20px;
     padding-top: 0;
-    padding-bottom: 25px;
   }
 
   /* latest-work */
