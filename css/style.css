@@ -1,17 +1,6 @@
 @charset "utf-8";
 /* ページ全体で参照する色を定義 */
 
-/* var(--color-to-use) で使用 */
-
-:root {
-  --color-default-text: #333;
-  --color-theme: #74cfae;
-  --color-background-gray: #f2f2f2;
-  --color-background-darkgray: #4e4e4e;
-  --height-nav-bar: 70px;
-  --height-nav-bar-sp: 90px;
-}
-
 /* general */
 
 body {
@@ -29,7 +18,6 @@ body {
 .header {
   background-color: #fff;
   box-shadow: 0 0 1px rgba(0, 0, 0, .5);
-  height: var(--height-nav-bar);
   position: fixed;
   padding: 0;
   top: 0;
@@ -39,17 +27,15 @@ body {
 }
 
 .header-inner {
-  padding: 15px auto;
+  padding: 15px 0;
   display: flex;
-  height: var(--height-nav-bar);
   justify-content: space-between;
   align-items: center;
 }
 
 .header__bolt_icon {
-  color: var(--color-default-text);
+  color: #333;;
   display: inline-block;
-  line-height: var(--height-nav-bar);
   font-size: 40px;
 }
 
@@ -58,37 +44,39 @@ body {
 }
 
 .header__btn_contact {
-  background-color: var(--color-theme);
+  background-color: #74cfae;
   color: #fff;
   display: inline-block;
   font-size: 12px;
   padding: 14px 12px;
-  margin-top: 15px;
-  margin-bottom: 15px;
   text-decoration: none;
   transition: color .3s ease;
 }
 
 .header__btn_contact:hover {
-  color: var(--color-default-text);
+  color: #333;;
 }
 
 /* main */
 
 .main {
-  background-color: var(--color-background-gray);
+  background-color: #f2f2f2;
   width: 100%;
 }
 
 /* theme */
+.theme {
+  padding: 250px 0;
+}
 
 .theme-inner {
   text-align: center;
 }
 
 .theme__heading {
-  color: var(--color-theme);
+  color: #74cfae;
   font-weight: 700;
+  font-size: 90px;
 }
 
 .theme__description {
@@ -101,9 +89,8 @@ body {
 /* detail */
 
 .detail {
-  background-color: var(--color-theme);
+  background-color: #74cfae;
   color: #fff;
-  margin-top: 250px;
   padding-top: 50px;
 }
 
@@ -140,8 +127,9 @@ body {
 /* latest-work */
 
 .latest-work {
-  color: var(--color-default-text);
-  margin-top: 60px;
+  color: #333;;
+  padding-top: 60px;
+  padding-bottom: 70px;
   text-align: center;
 }
 
@@ -159,7 +147,7 @@ body {
 }
 
 .latest-work__image-link {
-  margin: 100px 0 0 80px; /* 上と左にmargin */
+  margin: 80px 0 0 100px; /* 上と左にmargin */
   opacity: .7;
   transition: opacity .3s ease;
 }
@@ -173,7 +161,7 @@ body {
 }
 
 .latest-work__btn-email {
-  background-color: var(--color-theme);
+  background-color: #74cfae;
   box-sizing: border-box;
   color: #fff;
   display: inline-block;
@@ -186,14 +174,13 @@ body {
 }
 
 .latest-work__btn-email:hover {
-  color: var(--color-default-text);
+  color: #333;;
 }
 
 /* skills */
 
 .skills {
-  background-color: var(--color-background-darkgray);
-  margin-top: 70px;
+  background-color: #4e4e4e;
   padding-top: 70px;
   padding-bottom: 100px;
   text-align: center;
@@ -220,7 +207,7 @@ body {
 /* sns */
 
 .sns {
-  margin-top: 200px;
+  padding-top: 200px;
   padding-bottom: 200px;
 }
 
@@ -233,7 +220,6 @@ body {
   display: inline-block;
   color: #74cfae;
   font-size: 35px;
-  height: 100px;
   line-height: 100px;
   text-align: center;
   transition: .3s;
@@ -247,7 +233,7 @@ body {
 /* footer */
 
 .footer {
-  background-color: var(--color-theme);
+  background-color: #74cfae;
   width: 100%;
   padding: 20px 0 25px 0;
 }
@@ -266,17 +252,14 @@ body {
     width: 97%;
   }
 
-  .header {
-    height: var(--height-nav-bar-sp);
-  }
   
   .header-inner {
-    height: var(--height-nav-bar-sp);
+    height: 90px;
+    padding: 15px;
   }
 
   .header__bolt_icon {
-    font-size: calc(var(--height-nav-bar-sp) - 45px);
-    margin: 15px;
+    font-size: 45px;
   }
 
   .header__btn_hamburger {
@@ -284,42 +267,38 @@ body {
     border-radius: 4px;
     color: #ddd;
     display: inline-block;
-    font-size: calc(var(--height-nav-bar-sp) - 45px);
-    height: calc(var(--height-nav-bar-sp) - 45px);
-    line-height: calc(var(--height-nav-bar-sp) - 45px);
-    margin: 15px;
+    font-size: 45px;
     padding: 10px;
     text-align: center;
     text-decoration: none;
-    width: 90px;
+    width: 80px;
   }
   
   .header__btn_contact {
     position: fixed;
     display: none;
     left:0;
-    top: var(--height-nav-bar-sp);
+    top: 120px;
     width:100%;
     margin: 0;
     
   }
 
   .main {
-    padding-top: var(--height-nav-bar-sp);
+    padding-top: 120px;
     /* ナビゲーションバーの固定分 */
   }
 
   /* theme */
+  .theme {
+    padding-top: 160px;
+    padding-bottom: 130px;
+  }
   .theme__heading {
     font-size: 80px;
-    margin: 160px auto 0;
   }
 
   /* detail */
-  .detail {
-    margin-top: 130px;
-  }
-
   .detail-inner {
     flex-flow: column;
   }
@@ -359,7 +338,6 @@ body {
   .latest-work__description {
     flex-flow: column;
     margin-top: 80px;
-    margin-bottom: 70px;
   }
   .latest-work__btn-email {
     margin: 40px auto 0;
@@ -382,8 +360,7 @@ body {
 
   /* sns */
   .sns {
-    margin-top: 60px;
-    padding-bottom: 60px;
+    padding: 50px 15px;
   }
 
   .sns-inner{
@@ -392,9 +369,6 @@ body {
     margin: 0 auto;
   }
 
-  .sns__button {
-    width: auto;
-  }
 }
 
 @media screen and (min-width:768px) and ( max-width:1199px) {
@@ -403,15 +377,9 @@ body {
   }
 
   .main {
-    padding-top: var(--height-nav-bar);
-    /* ナビゲーションバーの固定分 */
+    margin-top: 70px;
   }
 
-  /* theme */
-  .theme__heading {
-    font-size: 90px;
-    margin: 250px auto 0;
-  }
 
   /* detail */
   .detail-inner {
@@ -430,6 +398,10 @@ body {
   }
 
   /* latest-work */
+
+  .latest-work {
+    padding-bottom: 70px;
+  }
   .latest-work__images {
     display: flex;
     flex-flow: column;
@@ -454,7 +426,6 @@ body {
   .latest-work__description {
     flex-flow: column;
     margin-top: 80px;
-    margin-bottom: 70px;
   }
   .latest-work__btn-email {
     margin: 40px auto 0;
@@ -477,14 +448,8 @@ body {
 }
 @media screen and (min-width:1200px) {
   .main {
-    padding-top: var(--height-nav-bar);
+    margin-top: 70px;
     /* ナビゲーションバーの固定分 */
-  }
-
-  /* theme */
-  .theme__heading {
-    font-size: 90px;
-    margin: 250px auto 0;
   }
 
   /* pc 用の 3 列 2行表示 */
