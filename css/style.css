@@ -224,13 +224,14 @@ body {
   padding-bottom: 200px;
 }
 
-.sns__buttons {
+.sns-inner {
   display: flex;
   justify-content: center;
 }
 
 .sns__button {
-  color: var(--color-theme);
+  display: inline-block;
+  color: #74cfae;
   font-size: 35px;
   height: 100px;
   line-height: 100px;
@@ -385,9 +386,10 @@ body {
     padding-bottom: 60px;
   }
 
-  .sns__buttons {
+  .sns-inner{
     flex-flow: column;
-    margin: 0 15px;
+    align-items: center;
+    margin: 0 auto;
   }
 
   .sns__button {
