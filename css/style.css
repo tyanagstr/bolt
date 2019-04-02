@@ -158,13 +158,13 @@ body {
   margin: 40px auto 0;
 }
 
-.latest-work__images__image {
-  margin: 0 100px 80px 0;
+.latest-work__image-link {
+  margin: 100px 0 0 80px; /* 上と左にmargin */
   opacity: .7;
   transition: opacity .3s ease;
 }
 
-.latest-work__images__image:hover {
+.latest-work__image-link:hover {
   opacity: 1;
 }
 
@@ -343,17 +343,18 @@ body {
     margin: 40px auto 0;
   }
 
-  .latest-work__images__image {
+  .latest-work__image-link {
     margin: 0 auto;
     width: 300px;
     opacity: .7;
     transition: opacity .3s ease;
   }
 
-  /* tab,sp 用の1列 3つずつ表示 */
-  .latest-work__images__image:nth-of-type(4) {
+  /* sp 用の1列 3つずつ表示 */
+  .latest-work__image-link:nth-child(3n+4) {
     margin-top: 80px;
   }
+
   .latest-work__description {
     flex-flow: column;
     margin-top: 80px;
@@ -435,17 +436,19 @@ body {
     margin: 40px auto 0;
   }
 
-  .latest-work__images__image {
+  .latest-work__image-link {
     margin: 0 auto;
     width: 300px;
     opacity: .7;
     transition: opacity .3s ease;
   }
 
-  /* tab,sp 用の1列 3つずつ表示 */
-  .latest-work__images__image:nth-of-type(4) {
+  /* tab 用の1列 3つずつ表示 */
+
+  .latest-work__image-link:nth-child(3n+4) {
     margin-top: 80px;
   }
+
   .latest-work__description {
     flex-flow: column;
     margin-top: 80px;
@@ -483,15 +486,16 @@ body {
   }
 
   /* pc 用の 3 列 2行表示 */
-  .latest-work__images__image:nth-of-type(3n) {
-    margin: 0 0 80px;
+  
+  /* 上３つ */
+  .latest-work__image-link:nth-child(-n+3) {
+    margin-top: 0;
   }
-  .latest-work__images__image:nth-of-type(n+4):nth-of-type(-n+6) {
-    margin: 0 100px 0 0;
+  /* 左 */
+  .latest-work__image-link:nth-child(3n+1) {
+    margin-left: 0;
   }
-  .latest-work__images__image:nth-of-type(n+6):nth-of-type(-n+6) {
-    margin: 0;
-  }
+
   .latest-work__description {
     margin-top: 90px;
     justify-content: center;
