@@ -324,7 +324,7 @@ body {
 
   .latest-work__image-link {
     margin: 0 auto;
-    width: 300px;
+    max-width: 300px;
     opacity: .7;
     transition: opacity .3s ease;
   }
@@ -411,7 +411,7 @@ body {
 
   .latest-work__image-link {
     margin: 0 auto;
-    width: 300px;
+    max-width: 300px;
     opacity: .7;
     transition: opacity .3s ease;
   }
