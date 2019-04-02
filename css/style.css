@@ -294,8 +294,13 @@ body {
   }
   
   .header__btn_contact {
+    position: fixed;
     display: none;
-    width: 100%;
+    left:0;
+    top: var(--height-nav-bar-sp);
+    width:100%;
+    margin: 0;
+    
   }
 
   .main {
