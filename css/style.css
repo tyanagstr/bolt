@@ -9,7 +9,7 @@
   --color-background-gray: #f2f2f2;
   --color-background-darkgray: #4e4e4e;
   --height-nav-bar: 70px;
-  --height-nav-bar-sp: 110px;
+  --height-nav-bar-sp: 90px;
 }
 
 /* general */
@@ -290,7 +290,7 @@ body {
     padding: 10px;
     text-align: center;
     text-decoration: none;
-    width: 100px;
+    width: 90px;
   }
   
   .header__btn_contact {
